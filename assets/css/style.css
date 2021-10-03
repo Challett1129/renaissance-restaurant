@@ -2,6 +2,10 @@
     text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
+#header-phrase {
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
 #sign-in-btn {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
