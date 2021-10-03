@@ -14,24 +14,35 @@
 <body>
     <header class= "block">
         <div class="has-background-success-dark columns m-auto">
-            <div class="title column has-text-white ">Renaissance Restaurant</div>
+            <div id="header-title" class="title column has-text-white">Renaissance Restaurant</div>
             <div class="column pt-5">
-                <button class="button is-small is-pulled-right" id="sign-in-btn">Sign In</button>
+                <button id="sign-in-btn" class="button is-small is-outlined is-pulled-right" >Sign In</button>
             </div>
         </div>
     </header>
     <div class="column">
         <h2 id="city-title" class="column block is-size-4 has-text-centered has-text-weight-semibold has-background-dark has-text-white-bis block">Select Your City</h2>
         <div id="btns" class="columns">
-            <div class="column has-text-centered">
-                <button id="atx-btn" class="button is-success is-outlined is-large">Austin</button>
+            <div class="column has-text-centered is-rounded">
+                <button id="atx-btn" class="button is-success is-outlined is-large  is-rounded">Austin</button>
+            </div>
+            <div class="column has-text-centered ">
+                <button id="la-btn" class="button is-success is-outlined is-large is-rounded">Los Angeles</button>
             </div>
             <div class="column has-text-centered">
-                <button id="la-btn" class="button is-success is-outlined is-large">Los Angeles</button>
+                <button id="nyc-btn" class="button is-success is-outlined is-large is-rounded">New York City</button>
             </div>
-            <div class="column has-text-centered">
-                <button id="nyc-btn" class="button is-success is-outlined is-large">New York City</button>
-            </div>
+        </div>
+    </div>
+    <div class= "block">
+        <div class="columns is-centered">
+            <div class="column is-three-quarters">
+                <div id="comment-box" class= "box">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>  
         </div>
     </div>
 </body>

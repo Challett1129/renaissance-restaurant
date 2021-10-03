@@ -1,3 +1,11 @@
+#header-title {
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+#sign-in-btn {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
 #atx-btn:hover {
     background-image: url("../images/atx.jpg");
     background-size: cover;
@@ -11,4 +19,8 @@
 #nyc-btn:hover {
     background-image: url("../images/nyc.jpg");
     background-size: cover;
+}
+
+#comment-box {
+    height: 500px;
 }
