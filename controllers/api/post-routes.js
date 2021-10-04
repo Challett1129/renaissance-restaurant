@@ -64,7 +64,7 @@ router.get('/:city', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-})
+});
 
 //create a new post
 router.post('/', (req, res) => {
@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
         title: req.body.title,
         text_body: req.body.text_body,
         city: req.body.city,
-        user_id: req.body.id
+        user_id: req.body.user_id
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -84,7 +84,7 @@ router.post('/', (req, res) => {
 
 //update a post
 router.put('/:id', (req, res) => {
-    Post.update({
+    Post.update(req.body, {
         where: {
             id: req.params.id
         }
