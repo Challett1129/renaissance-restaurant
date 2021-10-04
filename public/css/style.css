@@ -1,13 +1,18 @@
+/* Home Page Styles*/
 #header-title {
-    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
 }
 
 #header-phrase {
-    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
 }
 
 #sign-in-btn {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+#rec-btn {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 #atx-btn:hover {
