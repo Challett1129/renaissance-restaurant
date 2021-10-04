@@ -46,6 +46,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+//get post by city
 router.get('/:city', (req, res) => {
     Post.findAll({ 
         where: {
