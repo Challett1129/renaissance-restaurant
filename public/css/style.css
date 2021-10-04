@@ -15,19 +15,33 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
+#atx-btn { 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 #atx-btn:hover {
     background-image: url("../images/atx.jpg");
     background-size: cover;
+    color: white;
+}
+
+#la-btn {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 #la-btn:hover {
     background-image: url("../images/la.jpg");
     background-size: cover;
+    color: white;
+}
+
+#nyc-btn {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 #nyc-btn:hover {
     background-image: url("../images/nyc.jpg");
     background-size: cover;
+    color: white;
 }
 
 #comment-box {
