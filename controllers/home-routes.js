@@ -11,7 +11,9 @@ router.get('/', (req, res) => {
 
 //sends user to new-post page
 router.get('/new-post', (req, res) => {
-    res.render('new-post');
+    res.render('new-post', {
+        loggedIn: req.session.loggedIn
+    });
 });
 
 //sends user to login page
