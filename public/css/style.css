@@ -1,3 +1,15 @@
+.naked-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+.naked-link:hover {
+    color: inherit;
+}
+
+#home-button {
+    color: inherit
+}
+
 #header-title {
     text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }

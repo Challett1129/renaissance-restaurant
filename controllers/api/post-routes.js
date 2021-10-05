@@ -20,6 +20,26 @@ router.get('/', (req, res) => {
     });
 });
 
+//get post by city
+router.get('/:city', (req, res) => {
+    Post.findAll({ 
+        where: {
+            city: req.params.city
+        }
+    })
+    .then(dbPostData => {
+        if(!dbPostData) {
+            res.status(404).json({ message: 'No reviews in this city found' });
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 //get post by id
 router.get('/:id', (req, res) => {
     Post.findOne({ 
@@ -46,25 +66,6 @@ router.get('/:id', (req, res) => {
     });
 });
 
-//get post by city
-router.get('/:city', (req, res) => {
-    Post.findAll({ 
-        where: {
-            city: req.params.city
-        }
-    })
-    .then(dbPostData => {
-        if(!dbPostData) {
-            res.status(404).json({ message: 'No reviews in this city found' });
-            return;
-        }
-        res.json(dbPostData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
 
 //create a new post
 router.post('/', (req, res) => {
