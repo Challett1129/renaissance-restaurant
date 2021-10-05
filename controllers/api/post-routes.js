@@ -9,7 +9,8 @@ router.get('/', (req, res) => {
         include: {
             model: User, 
             attributes: {
-                include: ['username']
+                include: ['username'],
+                exclude: ['password']
             }
         }
     })
@@ -25,6 +26,13 @@ router.get('/:city', (req, res) => {
     Post.findAll({ 
         where: {
             city: req.params.city
+        },
+        include: {
+            model: User, 
+            attributes: {
+                include: ['username'],
+                exclude: ['password']
+            }
         }
     })
     .then(dbPostData => {
@@ -42,16 +50,10 @@ router.get('/:city', (req, res) => {
 
 //get post by id
 router.get('/:id', (req, res) => {
-    Post.findOne({ 
+    Post.findOne({
         where: {
             id: req.params.id
-        },
-        include: {
-            model: User, 
-            attributes: {
-                include: ['username']
-            }
-        }
+        }, 
     })
     .then(dbPostData => {
         if(!dbPostData) {
@@ -74,7 +76,7 @@ router.post('/', (req, res) => {
         title: req.body.title,
         text_body: req.body.text_body,
         city: req.body.city,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {

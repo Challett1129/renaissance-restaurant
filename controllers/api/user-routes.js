@@ -18,14 +18,14 @@ router.get('/', (req, res) => {
 });
 
 //get a single user by their id
-router.get('/:id', (req, res) => {
+router.get('/:username', (req, res) => {
     User.findOne({
         attributes: {
             exclude: ['password'],
             include: ['username','']
         },
         where: {
-            id: req.params.id
+            id: req.params.username
         } 
     })
     .then(dbUserData => {

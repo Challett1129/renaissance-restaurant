@@ -4,13 +4,13 @@
 
 <div class="columns is-centered mt-4">
     <div class="column has-text-centered is-half">
-        <form class="box">
+        <form class="box new-post-form">
             <h3 class="has-background-success-dark has-text-white is-size-4 block">Please fill out recommendation form</h3>
             <div class="field">
                 <label class="label">Select a city</label>
                 <div class="control">
                     <div class="select">
-                        <select>
+                        <select class="city-list">
                             <option value="Austin">Austin</option>
                             <option value="Los Angeles">Los Angeles</option>
                             <option value="New York City">New York City</option>
@@ -21,16 +21,18 @@
             <div class="field">
                 <label class="label">Restaurant Name</label>
                 <div class="control">
-                <input class="input" type="text" placeholder="Restaurant Name">
+                <input class="input restaurant-name" type="text" placeholder="Restaurant Name">
                 </div>
             </div>
             <div class="field">
                 <label class="label">Comments</label>
                 <div class="control">
-                <textarea class="textarea" placeholder="Tell us why you are recommending"></textarea>
+                <textarea class="textarea comment_body" placeholder="Tell us why you are recommending"></textarea>
                 </div>
             </div>
             <button class="button is-success is-outlined is-light">Add Recommendation</button>
         </form>
     </div>
 </div>
+
+<script src="javascript/new-post.js"></script>
