@@ -20,13 +20,13 @@ router.get('/', (req, res) => {
 //get a single user by their id
 router.get('/:id', (req, res) => {
     User.findOne({
-        attributes: {
-            exclude: ['password'],
-            include: ['username','']
-        },
         where: {
             id: req.params.id
-        } 
+        }, 
+        attributes: {
+            exclude: ['password'],
+            include: ['username']
+        }
     })
     .then(dbUserData => {
         if(!dbUserData) {
