@@ -1,0 +1,42 @@
+.naked-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+.naked-link:hover {
+    color: inherit;
+}
+
+#home-button {
+    color: inherit
+}
+
+#header-title {
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+#header-phrase {
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+#sign-in-btn {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#atx-btn:hover {
+    background-image: url("/images/atx.jpg");
+    background-size: cover;
+}
+
+#la-btn:hover {
+    background-image: url("/images/la.jpg");
+    background-size: cover;
+}
+
+#nyc-btn:hover {
+    background-image: url("../images/nyc.jpg");
+    background-size: cover;
+}
+
+#comment-box {
+    height: 500px;
+}
