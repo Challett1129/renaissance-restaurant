@@ -49,13 +49,17 @@ router.post('/', (req, res) => {
     .then(dbUserData => {
         //create the users unique session 
         req.session.save(() => {
-            //users session variables
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
             res.json(dbUserData);
+        });
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err);
     });
-});
+})
 
 router.post('/login', (req, res) => {
     User.findOne({
@@ -84,6 +88,9 @@ router.post('/login', (req, res) => {
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
     })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err);
     });
 });
 
