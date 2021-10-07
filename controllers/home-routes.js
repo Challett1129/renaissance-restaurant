@@ -18,8 +18,38 @@ router.get('/new-post', (req, res) => {
 
 //sends user to login page
 router.get('/login', (req, res) => {
-    res.render('login')
+  res.render('login')
 });
+
+router.get('/:city', (req, res) => { 
+  Post.findAll({ 
+    where: {
+        city: req.params.city
+    },
+    include: {
+        model: User, 
+        attributes: {
+            include: ['username'],
+            exclude: ['password']
+        }
+    }
+})
+.then(dbPostData => {
+    //serialize data 
+    const posts = dbPostData.map(post => post.get({ plain: true }));
+    //send data to template
+    res.render('city-reviews', {
+      posts,
+      loggedIn: req.session.loggedIn
+    });
+})
+.catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+});
+})
+
+
 
 //logs out a user
 router.post('/logout', (req, res) => {
@@ -33,5 +63,7 @@ router.post('/logout', (req, res) => {
     }
   
 });
+
+
 
 module.exports = router

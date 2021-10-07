@@ -1,4 +1,4 @@
-    <div class="column">
+<div class="column">
         <h2 id="city-title" class="column block is-size-4 has-text-centered has-text-weight-semibold has-background-grey-dark has-text-white-bis block">Select Your City</h2>
         <div id="btns" class="columns">
             <div class="column has-text-centered is-rounded">
@@ -12,3 +12,9 @@
             </div>
         </div>
     </div>
+
+    <article>
+        {{#each posts as |post|}}
+        {{> post-info post}}
+        {{/each}}
+    </article>
