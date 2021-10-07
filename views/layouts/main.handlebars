@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Renaissance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<header class= "block">
+    <div class="columns has-background-success-dark m-auto">
+        <h1 id="header-title" class="is-size-3 column has-text-white my-auto has-text-centered"> <a class="naked-link" href="/">Restaurant Renaissance</a> </h1>
+        <div id="header-phrase" class="column has-text-white my-auto has-text-centered">Where great restaurant recommendations happen!</div>
+        <div class="column my-auto has-text-centered">
+           {{#if loggedIn}}
+           <button id="sign-out-btn" class="button is-small is-outlined m-1"> Sign Out </button>
+           <button id="rec-btn" class="button is-small is-outlined m-1" > <a class="naked-link" href="/new-post"> New Recommendation</a></button>
+            {{else}}
+            <button id="sign-in-btn" class="button is-small is-outlined m-1"> <a href="/login" class="naked-link">Sign In</a></button>
+            {{/if}}
+        </div>
+    </div>
+</header>
+
+    <main>
+        {{{body}}}
+    </main>
+
+{{#if loggedIn}} 
+<script src="/javascript/logout.js"></script>
+{{/if}}
+</body>
+</html>
